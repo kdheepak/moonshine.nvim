@@ -1,3 +1,3 @@
 # moonshine.nvim
 
-Example of using rust to configure nvim
+Example of using rust to configure nvim.
