@@ -1,0 +1,9 @@
+[package]
+authors = ["Dheepak Krishnamurthy <me@kdheepak.com>"]
+edition = "2018"
+name = "moonshine"
+version = "0.1.0"
+crate-type = ["cdylib"]
+
+[dependencies]
+mlua = {version = "*", features = ["luajit", "vendored", "module"]}
