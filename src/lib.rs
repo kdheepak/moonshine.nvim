@@ -1,18 +1,14 @@
 use mlua::chunk;
 use mlua::prelude::*;
 
-fn hello(lua: &Lua, _name: String) -> LuaResult<LuaTable> {
+fn hello(lua: &Lua, name: String) -> LuaResult<LuaTable> {
     let t = lua.create_table()?;
+    t.set("name", name.clone())?;
     let _globals = lua.globals();
-    let a = 1;
-    let b = 2;
-    let name = "world";
     lua.load(chunk! {
-        print($a + $b)
         print("hello, " .. $name)
     })
     .exec()?;
-    t.set("hello", "hello")?;
     Ok(t)
 }
 
