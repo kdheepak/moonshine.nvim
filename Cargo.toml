@@ -6,4 +6,4 @@ version = "0.1.0"
 crate-type = ["cdylib"]
 
 [dependencies]
-mlua = {version = "*", features = ["luajit", "vendored", "module"]}
+mlua = {version = "*", features = ["luajit", "vendored", "module", "async", "send", "serialize", "macros"]}
